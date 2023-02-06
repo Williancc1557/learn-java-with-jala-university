@@ -1,6 +1,7 @@
 public class Matriz {
     public static void main(String[] args) {
         // int notes[][] = new int[LINHA][COLUNA]
+        // int notes[][] = {{1, 2, 3}, {3, 4, 5}, {6, 7, 8}} // uniform array or jaquet array
         int LINE = 3;
         int COLUMN = 3;
 
