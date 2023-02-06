@@ -6,7 +6,8 @@ public class Activity3 {
     static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
-        second();
+        // first();
+        // second();
     }
 
     public static void first() {
