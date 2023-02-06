@@ -63,16 +63,12 @@ public class Activity3 {
             System.out.println("5. SAIR");
 
             int optionInput = scan.nextInt();
-
-            double number1 = 0;
-            double number2 = 0;
-
             if (optionInput == 5) break;
 
             System.out.print("Digite o valor de x: ");
-            number1 = scan.nextInt();
+            double number1 = scan.nextInt();
             System.out.print("Digite o valor de y: ");
-            number2 = scan.nextInt();
+            double number2 = scan.nextInt();
 
             switch (optionInput) {
                 case 1:
