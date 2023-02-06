@@ -1,4 +1,4 @@
-package activities.week3;
+package activities.week3.lab;
 
 import java.util.Scanner;
 
