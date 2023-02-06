@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Vetor {
     public static void main(String[] args) {
+        // double[] notas = {1.1, 2.2, 3.3, 4.2}; uniform array or jaquet array
         double[] notas = new double[5];
         Scanner scan = new Scanner(System.in);
 
