@@ -8,14 +8,19 @@ public class question3 {
 
 
     public static void main(String[] args) {
-        System.out.println(determinante());
-    }
-
-    public static double determinante() {
         int[][] matrix = getMatrix(3);
 
+        System.out.print("Determinante: ");
+        System.out.println(determinante(matrix));
+
+        System.out.print("Simétrico: ");
+        System.out.println(checkSymmetry(matrix, 3, 3));
+    }
+
+    public static double determinante(int[][] matrix) {
         int diagonalSumIndo = getDiagonalsIndo(matrix, 3);
         int diagonalSumVoltando = getDiagonalsVoltando(matrix, 3);
+
 
         return diagonalSumIndo - diagonalSumVoltando;
     }
@@ -99,5 +104,17 @@ public class question3 {
 
 
         return diagonalsIndoSum;
+    }
+
+    public static boolean checkSymmetry(int matrix[][], int line, int column) {
+        for (int l = 0; l < line; l++) {
+            for (int c = 0; c < column; c++) {
+                boolean withoutSymmetry = matrix[l][c] != matrix[c][l];
+
+                if (withoutSymmetry) return false;
+            }
+        }
+
+        return true;
     }
 }
