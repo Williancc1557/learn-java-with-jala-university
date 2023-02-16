@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"activities.week3.lab"},{"l":"All Packages","u":"allpackages-index.html"}];updateSearchResults();
