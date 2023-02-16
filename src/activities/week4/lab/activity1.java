@@ -1,5 +1,4 @@
 package activities.week4.lab;
-import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -18,5 +17,9 @@ public class activity1 {
         double delta = first(b, 2) - 4 * a * c;
 
         return delta;
+    }
+
+    public static void third(int a, int b, int c) {
+        // I did it in question3 file in this directory
     }
 }
