@@ -12,16 +12,10 @@ public class question3 {
     }
 
     public static double determinante() {
-        System.out.print("Type the colum and line of matrix: ");
-        int matrixSizeInput = scan.nextInt();
-        int[][] matrix = getMatrix(matrixSizeInput);
+        int[][] matrix = getMatrix(3);
 
-        int diagonalSumIndo = getDiagonalsIndo(matrix, matrixSizeInput);
-        int diagonalSumVoltando = getDiagonalsVoltando(matrix, matrixSizeInput);
-
-        System.out.println(diagonalSumIndo);
-        System.out.println(diagonalSumVoltando);
-
+        int diagonalSumIndo = getDiagonalsIndo(matrix, 3);
+        int diagonalSumVoltando = getDiagonalsVoltando(matrix, 3);
 
         return diagonalSumIndo - diagonalSumVoltando;
     }
@@ -64,9 +58,13 @@ public class question3 {
 
         int state = 0;
         int diagonal = 0;
+        int diagonalMultiplication = 1;
+
         for (int column = 0; column < matrix.length + matrix.length; column++) {
-            diagonalsIndoSum += matrix[diagonal][column];
+            diagonalMultiplication *= matrix[diagonal][column];
             if (diagonal == diagonalLength - 1) {
+                diagonalsIndoSum += diagonalMultiplication;
+                diagonalMultiplication = 1;
                 state++;
                 column = state - 1;
                 diagonal = 0;
@@ -85,14 +83,16 @@ public class question3 {
 
         int state = matrix.length + matrix.length - 2;
         int diagonal = 0;
+        int diagonalMultiplication = 1;
         for (int column = matrix.length + matrix.length - 2; column >= 0; column--) {
-            diagonalsIndoSum += matrix[diagonal][column];
+            diagonalMultiplication *= matrix[diagonal][column];
             if (diagonal == diagonalLength - 1) {
+                diagonalsIndoSum += diagonalMultiplication;
+                diagonalMultiplication = 1;
                 state--;
                 if (state == 0 || column <= 0) break;
                 column = state + 1;
                 diagonal = 0;
-
             }
             else diagonal++;
         }
