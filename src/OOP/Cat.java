@@ -1,4 +1,4 @@
-package JavaClass;
+package OOP;
 
 public class Cat {
     public String name;
